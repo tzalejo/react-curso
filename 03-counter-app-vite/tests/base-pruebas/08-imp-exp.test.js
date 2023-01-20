@@ -24,8 +24,6 @@ describe('Prueba en 08 import y export', () => {
 
     const heroesDC = getHeroesByOwner(dc);
 
-    console.log(heroesDC);
-
     expect(heroesDC.length).toBe(3);
     // me aseguro que la data, ya que puede cambiar..
     expect(heroesDC).toEqual(heroes.filter((heroe) => heroe.owner === dc));
