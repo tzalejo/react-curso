@@ -1,11 +1,11 @@
-import { Fragment } from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-export const FirstApp = ({ title, subTitle }) => {
+export const FirstApp = ({ title, subTitle, name }) => {
   return (
     <>
       <h1>{title}</h1>
-      <h2>Hola mi primier Componente, {subTitle}</h2>
+      <p>Hola mi primier Componente, {subTitle}</p>
+      <p>{name}</p>
     </>
   );
 };
@@ -18,6 +18,6 @@ FirstApp.propTypes = {
 
 // para asignar valor por defecto a los props desestructurada.
 FirstApp.defaultProps = {
-  title: "No hay titulo",
+  // title: 'No hay titulo',
   subTitle: 0,
 };
