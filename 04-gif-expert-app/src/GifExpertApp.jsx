@@ -3,7 +3,7 @@ import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch"]);
+  const [categories, setCategories] = useState([]);
 
   const addCategory = (newCategory) => {
     // valido si existe la nueva categoria.
@@ -15,7 +15,7 @@ export const GifExpertApp = () => {
 
   return (
     <>
-      <h1>GifExpertApp</h1>
+      <h1>Gif Expert App</h1>
 
       <AddCategory
         // setCategories= {setCategories}
