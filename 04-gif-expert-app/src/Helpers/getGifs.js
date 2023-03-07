@@ -1,5 +1,5 @@
 export const getGifGrid = async (category) => {
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=4ydUL7SdFZPIAh84Xyj4JVTAmLfMn0Kf&q=${category}&limit=5`;
+  const url = `https://api.giphy.com/v1/gifs/search?api_key=4ydUL7SdFZPIAh84Xyj4JVTAmLfMn0Kf&q=${category}&limit=15`;
   const resp = await fetch(url);
   const { data } = await resp.json();
 
