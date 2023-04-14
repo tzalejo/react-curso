@@ -1,23 +1,24 @@
-import { useState } from "react";
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({ onNewCategory }) => {
-  const [inputValue, setInputValue] = useState("Dragon Ball");
+  const [inputValue, setInputValue] = useState('');
 
-  const onInputChange = (e) => {
+  const onInputChange = ({ target }) => {
     // console.log(e.target.value);
-    setInputValue(e.target.value);
+    setInputValue(target.value);
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim().length <= 1) return;
     // setCategories((cat) => [inputValue, ...cat]);
+    setInputValue('');
     onNewCategory(inputValue.trim());
-    setInputValue("");
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} aria-label="form">
       <input
         type="text"
         placeholder="Buscar Gifs"
@@ -27,4 +28,9 @@ export const AddCategory = ({ onNewCategory }) => {
       />
     </form>
   );
+};
+
+// Validar que sea requerido el onNewCategory
+AddCategory.protoTypes = {
+  onNewCategory: PropTypes.func.isRequired,
 };
