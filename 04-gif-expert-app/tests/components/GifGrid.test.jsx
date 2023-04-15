@@ -10,6 +10,9 @@ describe('Prueba en GifGrid', () => {
   const category = 'Dragon Ball';
 
   test('debe de mostrar el loading incialmente', () => {
+    // cuadno hacemos el mock, tenemos que decir
+    // con que informacion que va a simular que va
+    // a devolver el mock
     useFetchGifs.mockReturnValue({
       images: [],
       isLoading: true,
