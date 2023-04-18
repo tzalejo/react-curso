@@ -31,8 +31,10 @@ describe('Prueba de el hook useFetchGifs', () => {
         // en este callback le decimos que espera por el cambio de algo
         // utilizamos esta exprecion de jest
         expect(result.current.images.length).toBeGreaterThan(0), // q sea mayor a 0
+      // { timeout: 1000 }, podemos tambien indicar el tiempo maximo que tiene q esperar..
     );
 
+    // Luego hacemos las aserciones correspondientes
     const { images, isLoading } = result.current;
 
     expect(images.length).toBeGreaterThan(0);
