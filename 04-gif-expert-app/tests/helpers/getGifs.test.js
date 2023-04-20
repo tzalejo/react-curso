@@ -1,4 +1,4 @@
-import { getGifGrid } from '../../src/helpers/getGifs.js';
+import { getGifGrid } from './../../src/Helpers/getGifs.js';
 
 describe('test getGif', () => {
   test('debe de retornar un arreglo de gifs', async () => {
