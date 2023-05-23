@@ -1,5 +1,4 @@
-import { useCounter } from "../hooks/useCounter";
-import { useFetch } from "../hooks/useFetch";
+import { useCounter, useFetch } from "../hooks/";
 import { LoadinQuote, Quote } from "../03-examples/";
 
 export const Layout = () => {
