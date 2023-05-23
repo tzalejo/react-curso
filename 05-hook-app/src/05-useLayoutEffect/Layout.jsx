@@ -1,7 +1,6 @@
 import { useCounter } from "../hooks/useCounter";
 import { useFetch } from "../hooks/useFetch";
-import { LoadinQuote } from "../03-examples/LoadinQuote";
-import { Quote } from "../03-examples/Quote";
+import { LoadinQuote, Quote } from "../03-examples/";
 
 export const Layout = () => {
   const { counter, increment } = useCounter(1);
