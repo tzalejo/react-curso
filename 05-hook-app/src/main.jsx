@@ -13,11 +13,15 @@ import "./index.css";
 // import { CallbackHook } from "./06-memos/CallbackHook";
 // import { Padre } from "./07-tarea-memo/Padre";
 // import "./08-useReduce/intro-reducer";
+// import { TodoApp } from "./08-useReduce/TodoApp";
 
-import { TodoApp } from "./08-useReduce/TodoApp";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { getRoutes } from "./Routes";
+
+const router = getRoutes();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
-  <TodoApp />,
-  // </React.StrictMode>,
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 );
